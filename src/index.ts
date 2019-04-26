@@ -1,49 +1,17 @@
 import * as adminType from "firebase-admin";
 
-function getDocPath(
-  documentRef:
-    | FirebaseFirestore.DocumentReference
-    | FirebaseFirestore.CollectionReference,
-  overrideTest?: boolean
-) {
-  const segments = getSegments(
-    { segments: documentRef.path.split("/") },
-    overrideTest
-  );
-
-  return segments.join("/");
-}
-
-function getSegments(
-  obj: {
-    segments: Array<string>;
-  },
-  overrideTest?: boolean
-): Array<string> {
-  const { segments } = obj;
-  if (
-    segments &&
-    segments.length > 2 &&
-    segments[0] === "__tests" &&
-    overrideTest !== true
-  ) {
-    // Skip the test segments
-    return segments.slice(2);
-  }
-  return segments;
-}
+import { CollectionReference } from "@google-cloud/firestore";
 
 function getCollectionOrQueryDepth(
   collectionOrQueryRef:
     | FirebaseFirestore.CollectionReference
     | FirebaseFirestore.Query
 ) {
-  if (collectionOrQueryRef["path"]) {
-    return Math.ceil(
-      getDocPath(
-        collectionOrQueryRef as FirebaseFirestore.CollectionReference
-      ).split("/").length / 2
-    );
+  if (
+    collectionOrQueryRef.hasOwnProperty("path") &&
+    collectionOrQueryRef instanceof CollectionReference
+  ) {
+    return Math.ceil(collectionOrQueryRef.path.split("/").length / 2);
   }
   return 0;
 }
