@@ -61,10 +61,6 @@ await deleter.deleteAll()
 
 ```
 
-## A note on using in Cloud Functions
-
-If using the
-
 ## Testing
 
 This repo includes tests that run against a firestore test database.
