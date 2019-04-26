@@ -1,0 +1,51 @@
+{
+  "name": "firestore-deleter",
+  "version": "1.0.0",
+  "description": "A utility for the Google firestore that allows for convenient deleting of firestore collections.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tslint --project tsconfig.json && tsc",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/node": "11.13.7",
+    "firebase-admin": "5.13.1",
+    "@types/jest": "23.3.5",
+    "firebase-functions": "2.3.0",
+    "firebase-functions-test": "0.1.6",
+    "jest": "23.3.0",
+    "prettier": "1.16.1",
+    "ts-jest": "23.10.4",
+    "tslint": "5.13.0",
+    "tslint-language-service": "0.9.9",
+    "typescript": "3.1.3"
+  },
+  "jest": {
+    "testRegex": "(.*|\\.(test))\\.(ts|js)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "_util",
+      "_fixture",
+      "_types",
+      "/src/",
+      "/dist/"
+    ],
+    "transform": {
+      "\\.ts$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "./tsconfig.json",
+        "diagnostics": false
+      }
+    }
+  },
+  "author": "Shane O'Sullivan",
+  "license": "MIT"
+}

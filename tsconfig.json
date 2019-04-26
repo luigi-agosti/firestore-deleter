@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "declaration": true,
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "es5",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "plugins": [
+      {
+        "name": "tslint-language-service",
+        "alwaysShowRuleFailuresAsWarnings": false,
+        "ignoreDefinitionFiles": true,
+        "configFile": "tslint.json"
+      }
+    ]
+  },
+  "compileOnSave": true,
+  "include": ["src"]
+}
