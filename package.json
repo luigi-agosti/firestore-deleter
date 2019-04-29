@@ -1,7 +1,7 @@
 {
   "name": "firestore-deleter",
   "version": "1.0.0",
-  "description": "A utility for the Google firestore that allows for convenient deleting of firestore collections.",
+  "description": "A utility for Google Firebase that allows for convenient deleting of Firestore collections.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
