@@ -8,12 +8,15 @@
     "build": "tslint --project tsconfig.json && tsc",
     "test": "jest"
   },
+  "peerDependencies": {
+    "firebase-admin": "^5.13.1",
+    "firebase-functions": "^2.3.0"
+  },
   "devDependencies": {
+    "firebase-admin": "^5.13.1",
+    "firebase-functions": "^2.3.0",
     "@types/node": "11.13.7",
-    "firebase-admin": "5.13.1",
     "@types/jest": "23.3.5",
-    "firebase-functions": "2.3.0",
-    "firebase-functions-test": "0.1.6",
     "jest": "23.3.0",
     "prettier": "1.16.1",
     "ts-jest": "23.10.4",
@@ -25,9 +28,6 @@
     "testRegex": "(.*|\\.(test))\\.(ts|js)$",
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "_util",
-      "_fixture",
-      "_types",
       "/src/",
       "/dist/"
     ],
