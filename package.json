@@ -1,6 +1,6 @@
 {
   "name": "firestore-deleter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A utility for Google Firebase that allows for convenient deleting of Firestore collections.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,6 +8,14 @@
     "build": "tslint --project tsconfig.json && tsc",
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PromiseNetwork/firestore-deleter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PromiseNetwork/firestore-deleter/issues"
+  },
+  "homepage": "https://github.com/PromiseNetwork/firestore-deleter#readme",
   "peerDependencies": {
     "firebase-admin": "^5.13.1",
     "firebase-functions": "^2.3.0"
